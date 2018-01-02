@@ -1,0 +1,6 @@
+files
+node_modules
+coverage
+config
+*.log
+*.sqlite

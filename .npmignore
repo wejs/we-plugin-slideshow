@@ -1,0 +1,9 @@
+test
+files
+config
+.jscsrc
+.jshintignore
+.jshintrc
+.travis.yml
+.gitignore
+*.log

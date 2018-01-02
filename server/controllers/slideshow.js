@@ -1,0 +1,5 @@
+/**
+ * Slideslow controller
+ */
+
+module.exports = {};
