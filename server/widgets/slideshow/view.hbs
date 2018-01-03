@@ -1,0 +1,36 @@
+{{#if widget.slideshow.slides.length}}
+  <div id="widget_slideshow_{{widget.id}}" class="carousel slide we-plugin-slideshow" data-ride="carousel">
+    <ol class="carousel-indicators">
+      {{#each widget.slideshow.slides as |slide key|}}
+        <li data-target="#widget_slideshow_{{widget.id}}" data-slide-to="{{key}}" class="{{#if @first}}active{{/if}}"></li>
+      {{/each}}
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      {{#each widget.slideshow.slides as |slide|}}
+        <div class="item {{#if @first}}active{{/if}}" style="background-image: url('{{slide.imageOBJ.urls.original}}')">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1">
+                <div class="header-content">
+                  <div class="header-content-inner">
+                    <h2><span>{{slide.title}}</span></h2>
+                    <p class="slide-description">{{slide.description}}</p>
+                    <a href="{{slide.link}}" class="btn btn-outline page-scroll">{{slide.linkText}}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+    <a class="left carousel-control" href="#widget_slideshow_{{widget.id}}" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#widget_slideshow_{{widget.id}}" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+{{/if}}
