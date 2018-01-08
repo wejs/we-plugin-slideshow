@@ -11,7 +11,7 @@ module.exports = function loadPlugin(projectPath, Plugin) {
       'access_slides_unpublished': {
         'title': 'Access unpublished slides'
       }
-    },
+    }
   });
 
   plugin.setResource({ name: 'slide' });

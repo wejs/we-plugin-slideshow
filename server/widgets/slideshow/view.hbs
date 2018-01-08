@@ -7,7 +7,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       {{#each widget.slideshow.slides as |slide|}}
-        <div class="item {{#if @first}}active{{/if}}" style="background-image: url('{{slide.imageOBJ.urls.original}}')">
+        <div class="item {{#if @first}}active{{/if}}" style="background-image: url('{{#if slide.imageOBJ.urls.slide}}{{slide.imageOBJ.urls.slide}}{{else}}{{slide.imageOBJ.urls.original}}{{/if}}')">
           <div class="container">
             <div class="row">
               <div class="col-sm-10 col-sm-offset-1">
