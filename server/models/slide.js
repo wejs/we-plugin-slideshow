@@ -57,16 +57,13 @@ module.exports = function slideModel(we) {
       },
       classMethods: {},
       hooks: {
-        beforeCreate(r, opts, done) {
+        beforeCreate(r) {
           // create an published content and set its publishedDate:
           if (r.published) {
             r.publishedAt = Date.now();
           }
-
-          done();
-          return r;
         },
-        beforeUpdate(r, opts, done) {
+        beforeUpdate(r) {
           if (r.published && !r.publishedAt) {
             // set publishedAt on publish:
             r.publishedAt = Date.now();
@@ -74,9 +71,6 @@ module.exports = function slideModel(we) {
             // reset publishedAt on unpublish
             r.publishedAt = null;
           }
-
-          done();
-          return r;
         }
       }
     }
