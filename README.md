@@ -2,8 +2,6 @@
 
 We.js plugin to add the slideshow API
 
-## API
-
 
 ## Links
 
@@ -12,3 +10,7 @@ We.js plugin to add the slideshow API
 ## License
 
 Under [the MIT license](https://github.com/wejs/we-core/blob/master/LICENSE.md).
+
+## Sponsored by
+
+- Linky Systems: https://linkysystems.com
