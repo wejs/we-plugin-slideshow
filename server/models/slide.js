@@ -57,6 +57,10 @@ module.exports = function slideModel(we) {
       },
       classMethods: {},
       hooks: {
+        beforeValidate(r) {
+          // force default 0 value:
+          if (!r.highlighted) r.highlighted = 0;
+        },
         beforeCreate(r) {
           // create an published content and set its publishedDate:
           if (r.published) {
